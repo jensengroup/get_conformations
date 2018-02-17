@@ -54,7 +54,7 @@ if __name__ == "__main__":
     #smiles = "C1(C2=CC=CN2)=NC=CC=C1"
     mol = Chem.MolFromSmiles(smiles)
     mol = Chem.AddHs(mol,explicitOnly=False)
-    AllChem.EmbedMolecule(mol,randomSeed=2)
+    AllChem.EmbedMolecule(mol)
     AllChem.UFFOptimizeMolecule(mol)
     
     max_conf = 10
